@@ -7,18 +7,15 @@
   <style>
     @import url(variables.css);
     @import url(global.css);
-    @import url(buttons.css);
+    @import url(inputs.css);
   </style>
 </head>
 <body>
 
-  <button class="btn-round">
-    Go
-  </button>
-
-  <button class="btn-round" disabled>
-    N/A
-  </button>
+  <div class="form-group">
+    <input type="text" id="input-text" class="input-text" autocomplete="off" required>
+    <label for="input-text" class="label">Label</label>
+  </div>
 
 </body>
 </html>

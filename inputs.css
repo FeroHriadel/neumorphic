@@ -1,0 +1,43 @@
+/* TEXT INPUT */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.label {
+    font-size: 1rem;
+    color: var(--color-dark);
+    margin-left: 1rem;
+    transform: translateY(-2.1rem);
+    transition: transform 0.2s linear, color 0.2s linear;
+    user-select: none;
+}
+
+.input-text {
+    background-color: var(--background-convex);
+    box-shadow: var(--drop-shadow-convex);
+    border-radius: var(--border-radius-max);
+    border: 0;
+    color: var(--color-mid);
+    padding: 1rem;
+}
+
+.input-text:focus {
+    outline: none;
+    box-shadow: var(--inner-shadow-concave);
+    background-color: var(--background-concave);
+    color: var(--color-light);
+}
+
+.input-text:focus + .label, .input-text:valid + .label {
+    transform: translate(0.5rem, -3.55rem);
+    color: var(--color-dark);
+}
+
+.input-text:disabled {
+    background-color: var(--background);
+    color: var(--color-dark);
+    box-shadow: var(--inner-shadow);
+}
