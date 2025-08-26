@@ -1,8 +1,16 @@
-    body {
-      background-color: var(--background);
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+* {
+  font-family: 'Nunito Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
