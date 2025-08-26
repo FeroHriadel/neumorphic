@@ -10,7 +10,7 @@
     font-size: 1rem;
     color: var(--color-dark);
     margin-left: 1rem;
-    transform: translateY(-2.1rem);
+    transform: translateY(-2.05rem);
     transition: transform 0.2s linear, color 0.2s linear;
     user-select: none;
 }
@@ -22,6 +22,9 @@
     border: 0;
     color: var(--color-mid);
     padding: 1rem;
+    font-size: 1rem;
+    text-indent: 0.5rem;
+    min-width: 200px;
 }
 
 .input-text:focus {
@@ -33,11 +36,57 @@
 
 .input-text:focus + .label, .input-text:valid + .label {
     transform: translate(0.5rem, -3.55rem);
-    color: var(--color-dark);
+    color: var(--color-mid);
+    font-size: 0.75rem;
+    text-transform: uppercase;
 }
 
 .input-text:disabled {
     background-color: var(--background);
     color: var(--color-dark);
     box-shadow: var(--inner-shadow);
+}
+
+/* FILE INPUT */
+.file-input-wrap {
+    position: relative;
+    background-color: var(--background-convex);
+    box-shadow: var(--drop-shadow-convex);
+    border-radius: var(--border-radius-max);
+    border: 0;
+    color: var(--color-mid);
+    font-size: 1rem;
+    text-indent: 0.5rem;
+    min-width: 200px;
+    height: 50px;
+    padding: 0 1rem;
+}
+
+.input-file {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.file-input-text {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-dark);
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.file-input-label {
+    position: absolute;
+    top: -0.5rem;
+    left: 1rem;
+    color: var(--color-mid);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    display: none;
 }
