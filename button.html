@@ -4,76 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-
   <style>
-    :root {
-      --color-mid: hsl(225, 8%, 70%);
-      --color-light: hsl(225, 8%, 84%);
-      --color-dark: hsl(225, 8%, 34%);
-      --text-shadow: 0 0 5px var(--color-light);
-      --background: hsl(0, 2%, 22%);
-      --background-convex: linear-gradient(145deg, #3d3b3b, #333232);
-      --background-concave: linear-gradient(145deg, #333232, #3d3b3b);
-      --drop-shadow: 8px 8px 13px #2c2a2a, -8px -8px 13px hsl(0, 1%, 27%);
-      --inner-shadow: inset 8px 8px 13px hsl(0, 2%, 17%), inset -8px -8px 13px hsl(0, 1%, 27%);
-      --drop-shadow-convex:  9px 9px 19px #282727, -9px -9px 19px #4a4747;
-      --inner-shadow-concave: inset 9px 9px 19px #282727, inset -9px -9px 19px #4a4747;
-      --border-radius-mid: 1rem;
-      --border-radius-max: 999px;
-    }
-
-    body {
-      background-color: var(--background);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .btn {
-      background-color: var(--background-convex);
-      border-radius: var(--border-radius-max);
-      box-shadow: var(--drop-shadow-convex);
-      color: var(--color-mid);
-      padding: 1rem 3rem;
-      transition: color 0.2s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      user-select: none;
-      outline: none;
-      border: 0;
-      letter-spacing: 0.1rem;
-      font-size: 1rem;
-    }
-
-    .btn:active {
-      box-shadow: var(--inner-shadow-concave);
-      background-color: var(--background-concave);
-      outline: 1px solid var(--color-light);
-      color: var(--color-light);
-      text-shadow: var(--text-shadow)
-    }
-
-    .btn:focus {
-      color: var(--color-light);
-      outline: 0;
-    }
-
-    .btn-round:disabled:active {
-      text-shadow: 0 0 0 var(--color-dark);
-      box-shadow: var(--drop-shadow-convex);
-      background-color: var(--background-convex);
-      color: var(--color-dark);
-      cursor: not-allowed;
-    }
+    @import url(variables.css);
+    @import url(global.css);
+    @import url(buttons.css);
   </style>
 </head>
 <body>
   
   <button class="btn">
-    Confirm
+    Enabled
+  </button>
+
+  <button class="btn" disabled>
+    Disabled
   </button>
 
 </body>

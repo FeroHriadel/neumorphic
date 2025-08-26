@@ -5,86 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    :root {
-      --color-mid: hsl(225, 8%, 70%);
-      --color-light: hsl(225, 8%, 84%);
-      --color-dark: hsl(225, 8%, 34%);
-      --text-shadow: 0 0 5px var(--color-light);
-      --background: hsl(0, 2%, 22%);
-      --background-convex: linear-gradient(145deg, #3d3b3b, #333232);
-      --background-concave: linear-gradient(145deg, #333232, #3d3b3b);
-      --drop-shadow: 8px 8px 13px #2c2a2a, -8px -8px 13px hsl(0, 1%, 27%);
-      --inner-shadow: inset 8px 8px 13px hsl(0, 2%, 17%), inset -8px -8px 13px hsl(0, 1%, 27%);
-      --drop-shadow-convex:  9px 9px 19px #282727, -9px -9px 19px #4a4747;
-      --inner-shadow-concave: inset 9px 9px 19px #282727, inset -9px -9px 19px #4a4747;
-      --border-radius-mid: 1rem;
-      --border-radius-max: 999px;
-    }
-
-    body {
-      background-color: var(--background);
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .btn-round {
-      display: flex;
-      justify-content: space-between;
-      width: 4.5rem;
-      height: 4.5rem;
-      padding: 0.5rem;
-      overflow: hidden;
-      border-radius: 50%;
-      background-color: var(--background-convex);
-      box-shadow: var(--drop-shadow-convex);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.5rem;
-      cursor: pointer;
-      color: var(--color-mid);
-      outline: 0;
-      border: 0;
-    }
-
-    .btn-round:active {
-      box-shadow: var(--inner-shadow-concave);
-      background-color: var(--background-concave);
-      color: var(--color-light);
-      text-shadow: var(--text-shadow);
-    }
-
-    .btn-round .btn-text {
-      font-size: 1rem;
-      text-align: center;
-      line-height: 1.1;
-      word-break: break-all;
-      letter-spacing: 0.075rem;
-    }
-
-    .btn-round:disabled {
-      color: var(--color-dark);
-      cursor: not-allowed;
-    }
-
-    .btn-round:disabled:active {
-      text-shadow: 0 0 0 var(--color-dark);
-      box-shadow: var(--drop-shadow-convex);
-      background-color: var(--background-convex);
-      color: var(--color-dark);
-      cursor: not-allowed;
-    }
+    @import url(variables.css);
+    @import url(global.css);
+    @import url(buttons.css);
   </style>
 </head>
 <body>
 
   <button class="btn-round">
-    <span class="btn-text">
-      Off
-    </span>
+    Go
   </button>
-  
+
+  <button class="btn-round" disabled>
+    N/A
+  </button>
+
 </body>
 </html>

@@ -1,0 +1,15 @@
+    :root {
+      --color-mid: hsl(225, 8%, 70%);
+      --color-light: hsl(225, 8%, 84%);
+      --color-dark: hsl(225, 8%, 34%);
+      --text-shadow: 0 0 5px var(--color-light);
+      --background: hsl(0, 2%, 22%);
+      --background-convex: linear-gradient(145deg, #3d3b3b, #333232);
+      --background-concave: linear-gradient(145deg, #333232, #3d3b3b);
+      --drop-shadow: 8px 8px 13px #2c2a2a, -8px -8px 13px hsl(0, 1%, 27%);
+      --inner-shadow: inset 8px 8px 13px hsl(0, 2%, 17%), inset -8px -8px 13px hsl(0, 1%, 27%);
+      --drop-shadow-convex:  9px 9px 19px #282727, -9px -9px 19px #4a4747;
+      --inner-shadow-concave: inset 9px 9px 19px #282727, inset -9px -9px 19px #4a4747;
+      --border-radius-mid: 1rem;
+      --border-radius-max: 999px;
+    }

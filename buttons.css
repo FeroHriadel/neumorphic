@@ -1,0 +1,97 @@
+/* PILL BUTTON */
+.btn {
+      background-color: var(--background-convex);
+      border-radius: var(--border-radius-max);
+      box-shadow: var(--drop-shadow-convex);
+      color: var(--color-mid);
+      padding: 1rem 3rem;
+      transition: color 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      user-select: none;
+      outline: none;
+      border: 0;
+      letter-spacing: 0.1rem;
+      font-size: 1rem;
+    }
+
+    .btn:active {
+      box-shadow: var(--inner-shadow-concave);
+      background-color: var(--background-concave);
+      outline: 1px solid var(--color-light);
+      color: var(--color-light);
+      text-shadow: var(--text-shadow)
+    }
+
+    .btn:focus {
+      color: var(--color-light);
+      outline: 0;
+    }
+
+    .btn:disabled {
+      color: var(--color-dark)
+    }
+
+    .btn:disabled:active {
+      text-shadow: 0 0 0 var(--color-dark);
+      box-shadow: var(--drop-shadow-convex);
+      background-color: var(--background-convex);
+      color: var(--color-dark);
+      cursor: not-allowed;
+      outline: 0;
+      border: 0;
+    }
+
+
+
+    /* ROUND BUTTON */
+    .btn-round {
+      display: flex;
+      justify-content: space-between;
+      width: 4.5rem;
+      height: 4.5rem;
+      padding: 0.5rem;
+      overflow: hidden;
+      border-radius: 50%;
+      background-color: var(--background-convex);
+      box-shadow: var(--drop-shadow-convex);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--color-mid);
+      outline: 0;
+      border: 0;
+            font-size: 1rem;
+      text-align: center;
+      line-height: 1;
+      word-break: break-all;
+      letter-spacing: 0.075rem;
+    }
+
+    .btn-round:active {
+      box-shadow: var(--inner-shadow-concave);
+      background-color: var(--background-concave);
+      color: var(--color-light);
+      text-shadow: var(--text-shadow);
+    }
+
+    .btn-round:disabled {
+      color: var(--color-dark);
+      cursor: not-allowed;
+    }
+
+    .btn-round:disabled:active {
+      text-shadow: 0 0 0 var(--color-dark);
+      box-shadow: var(--drop-shadow-convex);
+      background-color: var(--background-convex);
+      color: var(--color-dark);
+      cursor: not-allowed;
+    }
+
+    .btn-round:focus {
+      color: var(--color-light)
+    }
