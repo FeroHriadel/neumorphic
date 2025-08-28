@@ -1,26 +1,15 @@
 /* RAISED CARD */
 .card {
-      background-color: var(--background);
-      border-radius: var(--border-radius-mid);
-      box-shadow: var(--drop-shadow);
-      color: var(--color-mid);
-      transition: color 0.2s ease;
-    }
-
-.card:hover {
-    box-shadow: var(--inner-shadow);
-    color: var(--color-light);
+    background-color: var(--background);
+    border-radius: var(--border-radius-mid);
+    box-shadow: var(--drop-shadow);
+    color: var(--color-mid);
 }
 
 /* LOWERED CARD */
 .card-down {
-      background-color: var(--background);
-      box-shadow: var(--inner-shadow);
-      border-radius: var(--border-radius-mid);
-      color: var(--color-mid);
-}
-
-.card-down:hover {
-    box-shadow: var(--drop-shadow);
-    color: var(--color-light);
+    background-color: var(--background);
+    box-shadow: var(--inner-shadow);
+    border-radius: var(--border-radius-mid);
+    color: var(--color-mid);
 }

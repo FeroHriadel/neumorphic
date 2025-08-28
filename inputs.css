@@ -42,6 +42,8 @@
     color: var(--color-dark);
 }
 
+
+
 /* FILE INPUT */
 .file-input-wrap {
     position: relative;
@@ -76,6 +78,9 @@
     color: var(--color-dark);
     font-size: 1.25rem;
     pointer-events: none;
+    white-space: nowrap;
+    width: 90%;
+    overflow: hidden;
 }
 
 .file-input-label {
@@ -87,5 +92,52 @@
     text-transform: uppercase;
 }
 
-/* SELECT */
 
+
+/* IMAGE INPUT */
+.image-input-wrap {
+    position: relative;
+    box-shadow: var(--inner-shadow-concave);
+    background-color: var(--background-concave);
+    border-radius: var(--border-radius-mid);
+    color: var(--color-mid);
+    border: 0;
+    padding: 0 1rem;
+    font-size: 1.25em;
+    text-indent: 0.5rem;
+    min-width: 200px;
+    width: 100%;
+    height: 50px;
+    margin-top: 1.5rem;
+}
+
+.image-input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.image-input-label {
+    position: absolute;
+    top: -1.5rem;
+    left: 0.5rem;
+    color: var(--color-mid);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.image-input-text {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-dark);
+    font-size: 1.25rem;
+    pointer-events: none;
+    white-space: nowrap;
+    width: 90%;
+    overflow: hidden;
+}
