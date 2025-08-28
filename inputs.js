@@ -21,6 +21,26 @@ fileInputEl?.addEventListener('change', (event) => {
 
 
 
+// Multiple files input
+const multipleFilesInputEl = document.querySelector('.multiple-files-input');
+const multipleFilesInputText = document.querySelector('.multiple-files-input-text');
+
+multipleFilesInputEl?.addEventListener('change', (event) => {
+    if (!event?.target?.files?.length) {
+        multipleFilesInputText.textContent = 'Choose files...';
+        multipleFilesInputEl.value = '';
+    }
+    else {
+        const maxFiles = multipleFilesInputEl.getAttribute('max');
+        const files = Array.from(event?.target?.files).slice(0, maxFiles ? parseInt(maxFiles) : undefined);
+        multipleFilesInputText.textContent = `${files.length} file(s) selected`;
+        console.log(files.length);
+    }
+});
+
+
+
+
 // Image Input
 const imageInputEl = document.querySelector('.image-input');
 const imageInputText = document.querySelector('.image-input-text');
