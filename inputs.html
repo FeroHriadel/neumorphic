@@ -14,18 +14,20 @@
   <div class="container flex justify-center">
     <div class="flex flex-col justify-start align-center mt-8 w-50">
 
-    
 
+      <!-- Text Input -->
       <div class="form-group">
         <label for="input-text" class="label">Name</label>
         <input type="text" id="name" class="input-text" autocomplete="off" required placeholder="Enter the name...">
       </div>
 
+      <!-- Text Input (disabled) -->
       <div class="form-group">
         <label for="input-text" class="label">Tag (disabled)</label>
         <input type="text" id="tag" class="input-text" autocomplete="off" required placeholder="Enter the tag..." disabled value="brekeke">
       </div>
 
+      <!-- File Input -->
       <div class="form-group">
         <div class="file-input-wrap">
           <label class="file-input-label" for="input-file">File</label>
@@ -34,6 +36,7 @@
         </div>
       </div>
 
+      <!-- Multiple File Input -->
       <div class="form-group">
         <div class="multiple-files-input-wrap">
           <label class="multiple-files-input-label" for="multiple-files-input">Files</label>
@@ -42,6 +45,7 @@
         </div>
       </div>
 
+      <!-- Image Input -->
       <div class="form-group">
         <div class="image-input-wrap">
           <label class="image-input-label" for="image-input">Image</label>
@@ -50,6 +54,7 @@
         </div>
       </div>
 
+      <!-- Multiple Image Input -->
       <div class="form-group">
         <div class="multiple-images-input-wrap">
           <label class="multiple-images-input-label" for="images-input">Images</label>
@@ -59,16 +64,19 @@
         </div>
       </div>
     
+      <!-- Textarea -->
       <div class="form-group">
         <label for="textarea" class="label">Description</label>
         <textarea id="textarea" class="textarea" placeholder="Enter a description..." tabindex="0"></textarea>
       </div>
 
+      <!-- Textarea (disabled) -->
       <div class="form-group">
         <label for="textarea" class="label">Description (disabled)</label>
         <textarea id="textarea-disabled" class="textarea" disabled>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam molestias totam excepturi</textarea>
       </div>
 
+      <!-- Checkbox (and checked box by default)-->
       <div class="form-group flex flex-row">
         <input type="checkbox" id="checkbox-label" class="checkbox">
         <label for="checkbox-label" class="checkbox-label" aria-label="Toggle">
