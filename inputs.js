@@ -33,5 +33,23 @@ imageInputEl?.addEventListener('change', (event) => {
         const file = event?.target?.files[0];
         imageInputText.textContent = file.name;
     }
- 
+});
+
+
+
+// Multiple Images Input
+const multipleImagesInputEl = document.querySelector('.multiple-images-input');
+const multipleImagesInputText = document.querySelector('.multiple-images-input-text');
+
+multipleImagesInputEl?.addEventListener('change', (event) => {
+    if (!event?.target?.files?.length) {
+        multipleImagesInputText.textContent = 'Choose images';
+        multipleImagesInputEl.value = '';
+    }
+    else {
+        const maxFiles = multipleImagesInputEl.getAttribute('max');
+        const files = Array.from(event?.target?.files).slice(0, maxFiles ? parseInt(maxFiles) : undefined);
+        multipleImagesInputText.textContent = `${files.length} file(s) selected`;
+        console.log(files.length);
+    }
 });

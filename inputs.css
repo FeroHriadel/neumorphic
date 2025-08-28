@@ -141,3 +141,67 @@
     width: 90%;
     overflow: hidden;
 }
+
+
+
+/* MULTIPLE IMAGES INPUT */
+.multiple-images-input-wrap {
+    position: relative;
+    box-shadow: var(--inner-shadow-concave);
+    background-color: var(--background-concave);
+    border-radius: var(--border-radius-mid);
+    color: var(--color-mid);
+    border: 0;
+    padding: 0 1rem;
+    font-size: 1.25em;
+    text-indent: 0.5rem;
+    min-width: 200px;
+    width: 100%;
+    height: 50px;
+    margin-top: 1.5rem;
+}
+
+.multiple-images-input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.multiple-images-input-label {
+    position: absolute;
+    top: -1.5rem;
+    left: 0.5rem;
+    color: var(--color-mid);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.multiple-images-input-text {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-dark);
+    font-size: 1.25rem;
+    pointer-events: none;
+    white-space: nowrap;
+    width: 90%;
+    overflow: hidden;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.image-preview {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 0.25rem;
+    position: relative;
+}

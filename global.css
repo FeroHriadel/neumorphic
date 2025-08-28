@@ -551,10 +551,39 @@ body {
 
 
 /* text size */
-span, p, label, input, button {
+span, p, label, input, textarea, select, option, button {
   font-size: 1rem;
 }
 
-.
+h6 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+
+
+/* BORDER RADIUS */
+.border-radius-50 {
+  border-radius: 50%;
+}
 
 
