@@ -23,6 +23,13 @@
     height: 50px;
 }
 
+@media (max-width: 320px) {
+  .input-text {
+    min-width: 150px;
+    font-size: 0.9rem;
+  }
+}
+
 .input-text:placeholder-shown {
     color: var(--color-dark);
 }
@@ -61,6 +68,12 @@
     margin-top: 1.5rem;
 }
 
+@media (max-width: 320px) {
+  .file-input-wrap{
+    min-width: 150px;
+  }
+}
+
 .input-file {
     width: 100%;
     height: 100%;
@@ -81,6 +94,12 @@
     white-space: nowrap;
     width: 90%;
     overflow: hidden;
+}
+
+@media (max-width: 320px) {
+  .file-input-text{
+    font-size: 0.9rem;
+  }
 }
 
 .file-input-label {
@@ -109,6 +128,12 @@
     width: 100%;
     height: 50px;
     margin-top: 1.5rem;
+}
+
+@media (max-width: 320px) {
+  .multiple-files-input-wrap{
+    min-width: 150px;
+  }
 }
 
 .multiple-files-input {
@@ -144,6 +169,12 @@
     gap: 0.5rem;
 }
 
+@media (max-width: 320px) {
+  .multiple-files-input-text{
+    font-size: 0.9rem;
+  }
+}
+
 
 
 /* IMAGE INPUT */
@@ -161,6 +192,12 @@
     width: 100%;
     height: 50px;
     margin-top: 1.5rem;
+}
+
+@media (max-width: 320px) {
+  .image-input-wrap{
+    min-width: 150px;
+  }
 }
 
 .image-input {
@@ -194,6 +231,12 @@
     overflow: hidden;
 }
 
+@media (max-width: 320px) {
+  .image-input-text{
+    font-size: 0.9rem;
+  }
+}
+
 
 
 /* MULTIPLE IMAGES INPUT */
@@ -211,6 +254,12 @@
     width: 100%;
     height: 50px;
     margin-top: 1.5rem;
+}
+
+@media (max-width: 320px) {
+  .multiple-images-input-wrap{
+    min-width: 150px;
+  }
 }
 
 .multiple-images-input {
@@ -246,16 +295,10 @@
     gap: 0.5rem;
 }
 
-.image-preview {
-    width: 40px;
-    min-width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-right: 0.25rem;
-    position: relative;
+@media (max-width: 320px) {
+  .multiple-images-input-text{
+    font-size: 0.9rem;
+  }
 }
 
 
@@ -272,6 +315,13 @@
     font-size: 1.25rem;
     resize: none;
     color: var(--color-mid);
+}
+
+@media (max-width: 320px) {
+  .textarea {
+    min-width: 150px;
+    font-size: 0.9rem;
+  }
 }
 
 .textarea:placeholder-shown {
@@ -300,4 +350,10 @@
 .textarea:disabled {
     box-shadow: var(--drop-shadow);
     color: var(--color-dark);
+}
+
+@media (max-width: 320px) {
+  .textarea:disabled {
+    font-size: 0.9rem;
+  }
 }
