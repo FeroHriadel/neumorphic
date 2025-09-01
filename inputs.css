@@ -441,7 +441,6 @@
   position: absolute;
   right: 1.5rem;
   top: 50%;
-  transform: translateY(-50%);
   pointer-events: none;
   color: var(--color-mid);
   font-size: 0.5em;
@@ -483,6 +482,18 @@
 .select:disabled {
   box-shadow: var(--drop-shadow);
   color: var(--color-dark);
+}
+
+@media (max-width: 600px) {
+  .select-arrow  {
+    right: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .select-arrow  {
+    display: none;
+  }
 }
 
 @media (max-width: 320px) {
