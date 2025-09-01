@@ -428,3 +428,65 @@
 .checkbox:checked + .checkbox-label .checkbox-text {
   color: var(--color-light);
 }
+
+
+
+/* SELECT */
+.select-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.select-arrow {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--color-mid);
+  font-size: 0.5em;
+  transform: translateY(-50%) scaleX(1.5);
+}
+
+.select:disabled ~ .select-arrow {
+  color: var(--color-dark);
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: var(--background-concave);
+  box-shadow: var(--inner-shadow-concave);
+  border-radius: var(--border-radius-mid);
+  border: 0;
+  width: 100%;
+  height: 50px;
+  padding: 0 1rem;
+  font-size: 1.25rem;
+  color: var(--color-mid);
+}
+
+@media (max-width: 320px) {
+  .select {
+    min-width: 150px;
+    font-size: 0.9rem;
+  }
+}
+
+.select:focus {
+  outline: none;
+  border: 0;
+  color: var(--color-light);
+}
+
+.select:disabled {
+  box-shadow: var(--drop-shadow);
+  color: var(--color-dark);
+}
+
+@media (max-width: 320px) {
+  .select:disabled {
+    font-size: 0.9rem;
+  }
+}
