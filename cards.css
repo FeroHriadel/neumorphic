@@ -1,6 +1,6 @@
 /* RAISED CARD */
 .card {
-    background-color: var(--background);
+    background-color: var(--background-dark);
     border-radius: var(--border-radius-mid);
     box-shadow: var(--drop-shadow);
     color: var(--color-mid);
@@ -8,7 +8,7 @@
 
 /* LOWERED CARD */
 .card-down {
-    background-color: var(--background);
+    background-color: var(--background-dark);
     box-shadow: var(--inner-shadow);
     border-radius: var(--border-radius-mid);
     color: var(--color-mid);

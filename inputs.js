@@ -73,3 +73,49 @@ multipleImagesInputEl?.addEventListener('change', (event) => {
         console.log(files.length);
     }
 });
+
+
+
+// Multiselect
+const multiselectEl = document.querySelector('.multiselect-wrap');
+const multiselectText = document.querySelector('.multiselect-text');
+const multiselectItemsWrap = document.querySelector('.multiselect-items-wrap');
+const multiselectOptions = Array.from(multiselectItemsWrap.children);
+let isOpen = false;
+const selectedItems = [];
+
+function openMultiselect() {
+    isOpen = true;
+    multiselectItemsWrap.style.height = '200px';
+    setTimeout(() => { multiselectItemsWrap.scrollIntoView({ behavior: 'smooth' }); }, 200);
+}
+
+function closeMultiselect(event) {
+    if (event.target.classList.contains('multiselect-item')) return;
+    isOpen = false;
+    multiselectItemsWrap.style.height = '0px';
+}
+
+function toggleSelectedItem(event) {
+    const item = event.target;
+    if (!item.classList.contains('multiselect-item')) return;
+    const itemValue = item.dataset.value;
+    console.log(itemValue);
+    if (selectedItems.includes(itemValue)) {
+        selectedItems.splice(selectedItems.indexOf(itemValue), 1);
+        item.classList.remove('multiselect-item-selected');
+    } else {
+        selectedItems.push(itemValue);
+        item.classList.add('multiselect-item-selected');
+    }
+    multiselectText.textContent = selectedItems.length ? `${selectedItems.length} selected` : 'Choose options...';
+}
+
+multiselectEl?.addEventListener('click', (event) => {
+    if (!isOpen) { openMultiselect(); }
+    else { closeMultiselect(event); }
+});
+
+multiselectItemsWrap.addEventListener('click', (event) => {
+    toggleSelectedItem(event);
+});
