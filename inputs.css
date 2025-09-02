@@ -501,3 +501,61 @@
     font-size: 0.9rem;
   }
 }
+
+
+
+/* MULTISELECT */
+.multiselect-wrap {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  color: var(--color-mid);
+  display: flex;
+  align-items: center;
+  box-shadow: var(--inner-shadow-concave);
+  padding: 0 1rem;
+  border-radius: var(--border-radius-mid);
+}
+
+.multiselect-text {
+  font-size: 1.25rem;
+  pointer-events: none;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 90%;
+}
+
+.multiselect-arrow {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  pointer-events: none;
+  color: var(--color-mid);
+  font-size: 0.5em;
+  transform: translateY(-50%) scaleX(1.5);
+}
+
+.multiselect-items-wrap {
+  width: 100%;
+  height: 200px;
+  max-height: 200px;
+  position: absolute;
+  left: 0px;
+  top: 55px;
+  color: var(--color-mid);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--inner-shadow-concave);
+  background-color: var(--background-concave);
+  border-radius: var(--border-radius-mid);
+}
+
+.multiselect-item {
+  width: 100%;
+  height: 50rem;
+  font-size: 1.25rem;
+  color: var(--color-mid);
+  margin: 0 1rem;
+}
+
