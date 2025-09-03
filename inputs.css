@@ -518,6 +518,12 @@
   margin-bottom: 2rem;
 }
 
+.multiselect-wrap:focus {
+  outline: none;
+  border: 0;
+  color: var(--color-light);
+}
+
 .multiselect-wrap.disabled {
   box-shadow: var(--drop-shadow);
   color: var(--color-dark);
