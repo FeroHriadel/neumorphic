@@ -23,7 +23,7 @@
     height: 50px;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
   .input-text {
     min-width: 150px;
     font-size: 0.9rem;
@@ -68,7 +68,7 @@
     margin-top: 1.5rem;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
   .file-input-wrap{
     min-width: 150px;
   }
@@ -96,7 +96,7 @@
     overflow: hidden;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
   .file-input-text{
     font-size: 0.9rem;
   }
@@ -130,7 +130,7 @@
     margin-top: 1.5rem;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
   .multiple-files-input-wrap{
     min-width: 150px;
   }
@@ -169,7 +169,7 @@
     gap: 0.5rem;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
   .multiple-files-input-text{
     font-size: 0.9rem;
   }
@@ -194,7 +194,7 @@
     margin-top: 1.5rem;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
   .image-input-wrap{
     min-width: 150px;
   }
@@ -231,7 +231,7 @@
     overflow: hidden;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
   .image-input-text{
     font-size: 0.9rem;
   }
@@ -256,7 +256,7 @@
     margin-top: 1.5rem;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
   .multiple-images-input-wrap{
     min-width: 150px;
   }
@@ -295,7 +295,7 @@
     gap: 0.5rem;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
   .multiple-images-input-text{
     font-size: 0.9rem;
   }
@@ -317,7 +317,7 @@
     color: var(--color-mid);
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
   .textarea {
     min-width: 150px;
     font-size: 0.9rem;
@@ -352,7 +352,7 @@
     color: var(--color-dark);
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
   .textarea:disabled {
     font-size: 0.9rem;
   }
@@ -466,7 +466,7 @@
   color: var(--color-mid);
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
   .select {
     min-width: 150px;
     font-size: 0.9rem;
@@ -496,7 +496,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 390px) {
   .select:disabled {
     font-size: 0.9rem;
   }
@@ -517,12 +517,26 @@
   border-radius: var(--border-radius-mid);
 }
 
+@media (max-width: 390px) {
+  .multiselect-wrap {
+    min-width: 150px;
+    font-size: 0.9rem;
+  }
+}
+
 .multiselect-text {
   font-size: 1.25rem;
   pointer-events: none;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 90%;
+  max-width: 95%;
+}
+
+@media (max-width: 390px) {
+  .multiselect-text {
+    min-width: 150px;
+    font-size: 0.9rem;
+  }
 }
 
 .multiselect-arrow {
@@ -553,6 +567,8 @@
 
 .multiselect-item {
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
   height: 50rem;
   font-size: 1.25rem;
   color: var(--color-mid);
@@ -561,6 +577,13 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+@media (max-width: 390px) {
+  .multiselect-item {
+    min-width: 150px;
+    font-size: 0.9rem;
+  }
 }
 
 .multiselect-item:first-child {
@@ -574,7 +597,7 @@
 }
 
 .multiselect-item:hover {
-  background-color: var(--background-mid);
+  filter: brightness(1.25);
 }
 
 .multiselect-item:first-child:hover {
@@ -590,4 +613,22 @@
 .multiselect-item-selected {
   color: var(--color-light);
   background-color: var(--background-mid);
+}
+
+@media (max-width: 600px) {
+  .multiselect-arrow  {
+    right: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .multiselect-arrow  {
+    display: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .multiselectselect:disabled {
+    font-size: 0.9rem;
+  }
 }

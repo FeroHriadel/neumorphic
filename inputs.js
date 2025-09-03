@@ -108,7 +108,7 @@ function toggleSelectedItem(event) {
         selectedItems.push(itemValue);
         item.classList.add('multiselect-item-selected');
     }
-    multiselectText.textContent = selectedItems.length ? `${selectedItems.length} selected` : 'Choose options...';
+    multiselectText.textContent = selectedItems.length ? `${selectedItems.length} selected` : 'Choose options';
 }
 
 multiselectEl?.addEventListener('click', (event) => {
