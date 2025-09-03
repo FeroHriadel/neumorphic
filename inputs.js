@@ -100,13 +100,14 @@ function toggleSelectedItem(event) {
     const item = event.target;
     if (!item.classList.contains('multiselect-item')) return;
     const itemValue = item.dataset.value;
-    console.log(itemValue);
     if (selectedItems.includes(itemValue)) {
         selectedItems.splice(selectedItems.indexOf(itemValue), 1);
         item.classList.remove('multiselect-item-selected');
+        item.setAttribute('aria-selected', 'false');
     } else {
         selectedItems.push(itemValue);
         item.classList.add('multiselect-item-selected');
+        item.setAttribute('aria-selected', 'true');
     }
     multiselectText.textContent = selectedItems.length ? `${selectedItems.length} selected` : 'Choose options';
 }
@@ -114,6 +115,12 @@ function toggleSelectedItem(event) {
 multiselectEl?.addEventListener('click', (event) => {
     if (!isOpen) { openMultiselect(); }
     else { closeMultiselect(event); }
+});
+
+document.addEventListener('click', (event) => {
+    if (!multiselectEl.contains(event.target)) {
+        closeMultiselect(event);
+    }
 });
 
 multiselectItemsWrap.addEventListener('click', (event) => {
