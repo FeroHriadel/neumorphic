@@ -77,23 +77,53 @@ multipleImagesInputEl?.addEventListener('change', (event) => {
 
 
 // Multiselect
+const triggerHeight = 50;
+const optionHeight = 50;
+const optionsMaxHeight = 200;
+const gap = 5;
 const multiselectEl = document.querySelector('.multiselect-wrap');
 const multiselectText = document.querySelector('.multiselect-text');
 const multiselectItemsWrap = document.querySelector('.multiselect-items-wrap');
 const multiselectOptions = Array.from(multiselectItemsWrap.children);
-let isOpen = false;
+const optionsHeight = multiselectOptions.length * optionHeight;
 const selectedItems = [];
+let isOpen = false;
+
+function canOpenDownwards() {
+    const rect = multiselectEl.getBoundingClientRect();
+    const spaceBelow = window.innerHeight - rect.bottom;
+    return spaceBelow > Math.min(optionsHeight + gap, optionsMaxHeight + gap);
+}
+
+function showOptionsUp() {
+    multiselectItemsWrap.style.transition = 'opacity 0.2s ease';
+    multiselectItemsWrap.style.top = `-${Math.min(optionsHeight, optionsMaxHeight) + gap}px`;
+    multiselectItemsWrap.style.height = `${Math.min(optionsHeight, optionsMaxHeight)}px`;
+    multiselectItemsWrap.style.opacity = '1';
+}
+
+function showOptionsDown() {
+    multiselectItemsWrap.style.top = `${triggerHeight + gap}px`;
+    multiselectItemsWrap.style.transition = 'opacity 0.2s ease, height 0.2s ease';
+    multiselectItemsWrap.style.height = `${Math.min(optionsHeight, optionsMaxHeight)}px`;
+    multiselectItemsWrap.style.opacity = '1';
+    setTimeout(() => { multiselectItemsWrap.scrollIntoView({ behavior: 'smooth' }); }, 100);
+}
 
 function openMultiselect() {
     isOpen = true;
-    multiselectItemsWrap.style.height = '200px';
-    setTimeout(() => { multiselectItemsWrap.scrollIntoView({ behavior: 'smooth' }); }, 200);
+    multiselectEl?.setAttribute('aria-expanded', 'true');
+    const enoughSpace = canOpenDownwards();
+    if (enoughSpace) showOptionsDown()
+    else showOptionsUp();
 }
 
 function closeMultiselect(event) {
     if (event.target.classList.contains('multiselect-item')) return;
     isOpen = false;
     multiselectItemsWrap.style.height = '0px';
+    multiselectItemsWrap.style.opacity = '0';
+    multiselectEl?.setAttribute('aria-expanded', 'false');
 }
 
 function toggleSelectedItem(event) {
@@ -104,10 +134,12 @@ function toggleSelectedItem(event) {
         selectedItems.splice(selectedItems.indexOf(itemValue), 1);
         item.classList.remove('multiselect-item-selected');
         item.setAttribute('aria-selected', 'false');
+        item.querySelector('.multiselect-check-icon').style.opacity = '0';
     } else {
         selectedItems.push(itemValue);
         item.classList.add('multiselect-item-selected');
         item.setAttribute('aria-selected', 'true');
+        item.querySelector('.multiselect-check-icon').style.opacity = '1';
     }
     multiselectText.textContent = selectedItems.length ? `${selectedItems.length} selected` : 'Choose options';
 }
@@ -119,6 +151,12 @@ multiselectEl?.addEventListener('click', (event) => {
 
 document.addEventListener('click', (event) => {
     if (!multiselectEl.contains(event.target)) {
+        closeMultiselect(event);
+    }
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
         closeMultiselect(event);
     }
 });

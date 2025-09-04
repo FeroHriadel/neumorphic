@@ -542,6 +542,7 @@
   white-space: nowrap;
   overflow: hidden;
   max-width: 95%;
+  user-select: none;
 }
 
 @media (max-width: 390px) {
@@ -559,6 +560,19 @@
   color: var(--color-mid);
   font-size: 0.5em;
   transform: translateY(-50%) scaleX(1.5);
+  user-select: none;
+}
+
+@media (max-width: 600px) {
+  .multiselect-arrow  {
+    right: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .multiselect-arrow  {
+    display: none;
+  }
 }
 
 .multiselect-wrap.disabled .multiselect-arrow {
@@ -568,6 +582,7 @@
 .multiselect-items-wrap {
   width: 100%;
   height: 0px;
+  opacity: 0;
   max-height: 200px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -577,11 +592,11 @@
   color: var(--color-mid);
   display: flex;
   flex-direction: column;
-  box-shadow: var(--inner-shadow-concave);
+  box-shadow: var(--inner-shadow-concave), 0 0 20px rgba(0, 0, 0, 0.2);
   background-color: var(--background-dark);
   border-radius: var(--border-radius-mid);
   z-index: 1;
-  transition: height 0.2s ease;
+  transition: height 0.2s ease, opacity 0.2s ease;
 }
 
 .multiselect-items-wrap::-webkit-scrollbar {
@@ -598,11 +613,12 @@
 }
 
 .multiselect-item {
+  position: relative;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
   min-height: 50px;
-  height: 50rem;
+  max-height: 50px;
   font-size: 1.25rem;
   color: var(--color-mid);
   text-indent: 1rem;
@@ -611,6 +627,8 @@
   justify-content: flex-start;
   align-items: center;
   user-select: none;
+  cursor: pointer;
+  z-index: 1;
 }
 
 @media (max-width: 390px) {
@@ -630,10 +648,6 @@
   border-bottom-right-radius: var(--border-radius-mid);
 }
 
-.multiselect-item:hover {
-  filter: brightness(1.25);
-}
-
 .multiselect-item:first-child:hover {
   border-top-left-radius: var(--border-radius-mid);
   border-top-right-radius: var(--border-radius-mid);
@@ -649,20 +663,29 @@
   background-color: var(--background-mid);
 }
 
-@media (max-width: 600px) {
-  .multiselect-arrow  {
-    right: 10px;
-  }
+.multiselect-item-text {
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
 }
 
-@media (max-width: 450px) {
-  .multiselect-arrow  {
-    display: none;
-  }
+.multiselect-check-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 30px;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
 }
 
 @media (max-width: 390px) {
-  .multiselectselect:disabled {
-    font-size: 0.9rem;
+  .multiselect-check-icon {
+    font-size: 0.75rem;
   }
 }
