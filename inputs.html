@@ -120,13 +120,13 @@
 
       <!-- Multiselect -->
       <div class="form-group">
-        <label for="multiselect" class="label">Multiselect</label>
+        <label for="multiselect" class=" label multiselect-label">Multiselect</label>
         <div class="multiselect-wrap" aria-haspopup="listbox" aria-expanded="false" aria-controls="multiselect-listbox" tabindex="0">
           <span class="multiselect-text">Choose options</span>
           <span class="multiselect-arrow">▼</span>
           <span class="multiselect-items-wrap" id="multiselect-listbox" role="listbox" aria-multiselectable="true">
             <span class="multiselect-item" data-value="{id: 1, name: 'name01'}" role="option" aria-selected="false">
-              <span>Option 1</span>
+              <span class="multiselect-item-text">Option 1</span>
               <span class="multiselect-check-icon">✔</span>
             </span>
             <span class="multiselect-item" data-value="{id: 2, name: 'name02'}" role="option" aria-selected="false">
@@ -157,18 +157,39 @@
         </div>
 
       <div class="form-group">
-        <label for="multiselect" class="label">Multiselect (disabled)</label>
+        <label for="multiselect" class="label multiselect-label">Multiselect (disabled)</label>
         <div class="multiselect-wrap disabled" aria-haspopup="listbox" aria-expanded="false" aria-controls="multiselect-listbox">
           <span class="multiselect-text">Choose options</span>
           <span class="multiselect-arrow">▼</span>
           <span class="multiselect-items-wrap" id="multiselect-listbox" role="listbox" aria-multiselectable="true">
-            <span class="multiselect-item" data-value="{id: 1, name: 'name01'}" role="option" aria-selected="false">Option 1</span>
-            <span class="multiselect-item" data-value="{id: 2, name: 'name02'}" role="option" aria-selected="false">Option 2</span>
-            <span class="multiselect-item" data-value="{id: 3, name: 'name03'}" role="option" aria-selected="false">Option 3</span>
-            <span class="multiselect-item" data-value="{id: 4, name: 'name04'}" role="option" aria-selected="false">Option 4</span>
-            <span class="multiselect-item" data-value="{id: 5, name: 'name05'}" role="option" aria-selected="false">Option 5</span>
-            <span class="multiselect-item" data-value="{id: 6, name: 'name06'}" role="option" aria-selected="false">Option 6</span>
-            <span class="multiselect-item" data-value="{id: 7, name: 'name07'}" role="option" aria-selected="false">Option 7</span>
+            <span class="multiselect-item" data-value="{id: 1, name: 'name01'}" role="option" aria-selected="false">
+              <span class="multiselect-item-text">Option 1</span>
+              <span class="multiselect-check-icon">✔</span>
+            </span>
+            <span class="multiselect-item" data-value="{id: 2, name: 'name02'}" role="option" aria-selected="false">
+              <span class="multiselect-item-text">Option 2</span>
+              <span class="multiselect-check-icon">✔</span>
+            </span>
+            <span class="multiselect-item" data-value="{id: 3, name: 'name03'}" role="option" aria-selected="false">
+              <span class="multiselect-item-text">Option 3</span>
+              <span class="multiselect-check-icon">✔</span>
+            </span>
+            <span class="multiselect-item" data-value="{id: 4, name: 'name04'}" role="option" aria-selected="false">
+              <span class="multiselect-item-text">Option 4</span>
+              <span class="multiselect-check-icon">✔</span>
+            </span>
+            <span class="multiselect-item" data-value="{id: 5, name: 'name05'}" role="option" aria-selected="false">
+              <span class="multiselect-item-text">Option 5</span>
+              <span class="multiselect-check-icon">✔</span>
+            </span>
+            <span class="multiselect-item" data-value="{id: 6, name: 'name06'}" role="option" aria-selected="false">
+              <span class="multiselect-item-text">Option 6</span>
+              <span class="multiselect-check-icon">✔</span>
+            </span>
+            <span class="multiselect-item" data-value="{id: 7, name: 'name07'}" role="option" aria-selected="false">
+              <span class="multiselect-item-text">Option that has quite a long text - even longer than expected</span>
+              <span class="multiselect-check-icon">✔</span>
+            </span>
           </span>
       </div>
 

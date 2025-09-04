@@ -85,6 +85,7 @@ const multiselectEl = document.querySelector('.multiselect-wrap');
 const multiselectText = document.querySelector('.multiselect-text');
 const multiselectItemsWrap = document.querySelector('.multiselect-items-wrap');
 const multiselectOptions = Array.from(multiselectItemsWrap.children);
+const multiselectLabelEl = document.querySelector('.multiselect-label');
 const optionsHeight = multiselectOptions.length * optionHeight;
 const selectedItems = [];
 let isOpen = false;
@@ -111,6 +112,7 @@ function showOptionsDown() {
 }
 
 function openMultiselect() {
+    if (multiselectEl?.classList.contains('disabled')) return;
     isOpen = true;
     multiselectEl?.setAttribute('aria-expanded', 'true');
     const enoughSpace = canOpenDownwards();
@@ -164,3 +166,9 @@ document.addEventListener('keydown', (event) => {
 multiselectItemsWrap.addEventListener('click', (event) => {
     toggleSelectedItem(event);
 });
+
+multiselectLabelEl?.addEventListener('click', (event) => {
+    console.log('label clicked');
+    if (!isOpen) openMultiselect()
+    else closeMultiselect(event);
+})
