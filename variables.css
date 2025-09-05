@@ -13,4 +13,7 @@
   --inner-shadow-concave: inset 9px 9px 19px #282727, inset -9px -9px 19px #4a4747;
   --border-radius-mid: 1rem;
   --border-radius-max: 999px;
+  --highlight-dark: rgba(50, 205, 50, 0.75);
+  --highlight-mid: rgba(50, 205, 50, 0.5);
+  --highlight-light: rgba(50, 205, 50, 0.25);
 }
