@@ -697,7 +697,13 @@
 .input-range-wrap {
   position: relative;
   width: 100%;
-  min-width: 260px;
+  min-width: 200px;
+}
+
+@media (max-width: 390px) {
+  .input-range-wrap {
+    min-width: 150px;
+  }
 }
 
 .slider-fill {
@@ -720,7 +726,6 @@
   -moz-appearance: none;
   appearance: none;
   width: 100%;
-  min-width: 260px;
   height: 1rem;
   background: var(--background-concave);
   border-radius: var(--border-radius-mid);
