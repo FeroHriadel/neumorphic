@@ -516,6 +516,7 @@
   padding: 0 1rem;
   border-radius: var(--border-radius-mid);
   margin-bottom: 2rem;
+  cursor: pointer;
 }
 
 .multiselect-wrap:focus {

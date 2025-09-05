@@ -152,6 +152,7 @@ multiselectEl?.addEventListener('click', (event) => {
 });
 
 document.addEventListener('click', (event) => {
+    if (event.target.classList.contains('multiselect-label')) return;
     if (!multiselectEl.contains(event.target)) {
         closeMultiselect(event);
     }
@@ -168,7 +169,6 @@ multiselectItemsWrap.addEventListener('click', (event) => {
 });
 
 multiselectLabelEl?.addEventListener('click', (event) => {
-    console.log('label clicked');
     if (!isOpen) openMultiselect()
     else closeMultiselect(event);
 })
