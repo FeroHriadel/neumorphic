@@ -172,3 +172,14 @@ multiselectLabelEl?.addEventListener('click', (event) => {
     if (!isOpen) openMultiselect()
     else closeMultiselect(event);
 })
+
+
+
+// Input Range
+const fillElement = document.querySelector('.slider-fill');
+const rangeInput = document.querySelector('.input-range');
+
+rangeInput.addEventListener('input', () => {
+    const value = rangeInput.value;
+    fillElement.style.width = `${value}%`;
+});

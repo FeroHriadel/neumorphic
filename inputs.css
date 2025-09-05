@@ -690,3 +690,97 @@
     font-size: 0.75rem;
   }
 }
+
+
+
+/* RANGE SLIDER */
+.input-range-wrap {
+  position: relative;
+  width: 100%;
+  min-width: 260px;
+}
+
+.slider-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(2px);
+  height: 1rem;
+  width: 25%;
+  box-shadow: var(--inner-shadow-concave);
+  filter: brightness(1.2);
+  border-bottom-left-radius: var(--border-radius-mid);
+  border-top-left-radius: var(--border-radius-mid);
+  pointer-events: none;
+  user-select: none;
+}
+
+.input-range {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  min-width: 260px;
+  height: 1rem;
+  background: var(--background-concave);
+  border-radius: var(--border-radius-mid);
+  box-shadow: var(--inner-shadow-concave);
+}
+
+.input-range::-moz-range-track {
+  height: 1rem;
+  background: var(--background-concave);
+  border-radius: var(--border-radius-mid);
+  box-shadow: var(--inner-shadow-concave);
+}
+
+.input-range:focus {
+  outline: 0;
+  box-shadow: var(--inner-shadow-concave), 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.input-range:disabled {
+  background: var(--background-convex);
+  box-shadow: var(--drop-shadow);
+  cursor: not-allowed;
+}
+
+.input-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--background-convex);
+  box-shadow: 4px 4px 6px #2c2a2a, -4px -4px 6px hsl(0, 1%, 27%);
+  filter: contrast(1.05);
+  border-radius: 50%;
+  width: 1.1rem;
+  height: 1.1rem;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+
+.input-range::-moz-range-thumb {
+  -moz-appearance: none;
+  background: var(--background-convex);
+  box-shadow: 4px 4px 6px #2c2a2a, -4px -4px 6px hsl(0, 1%, 27%);
+  filter: contrast(1.05);
+  border-radius: 50%;
+  width: 1.1rem;
+  height: 1.1rem;
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+
+.input-range:focus::-webkit-slider-thumb, .input-range:focus::-moz-range-thumb {
+  outline: 0;
+  filter: contrast(1.1);
+}
+
+.input-range::-moz-focus-outer {
+  border: 0;
+}
+
+.input-range::-moz-range-progress {
+  background: transparent;
+}
